@@ -65,7 +65,7 @@ const VerifyOTP = () => {
               <Grid size={{ xs: 12, md: 6, lg: 7 }} sx={{ position: "relative" }}>
                 <Box
                   sx={{
-                    width: 50,
+                    width: 500,
                     height: 500,
                     position: "absolute",
                     top: "50%",
@@ -93,7 +93,7 @@ const VerifyOTP = () => {
                           src={imagePath?.logo}
                           alt="Logo"
                           width={150}
-                          height={100}
+                          height={50}
                         />
                       </Box>
                     </Stack>

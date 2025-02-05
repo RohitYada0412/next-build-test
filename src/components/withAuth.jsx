@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { Box, Container } from "@mui/material";
 import { redirect } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
-import { Box, Grid2 as Grid } from "@mui/material";
 
-import Header from "./Header";
-import SideBar from "./Sidebar";
 import { useSelector } from "react-redux";
+import SideBar from "./Sidebar";
+import Header from "./Header";
 
 const withAuth = (Component) => {
 
@@ -27,34 +27,15 @@ const withAuth = (Component) => {
       }
     }, [isAdminLogin])
 
-    // useEffect(() => {
-    //   if (width <= 900) {
-    //     setSideBarOpen(false)
-    //   }
-    // }, [width])
-
-
-
     return (
       <React.Fragment>
-        {/* <StyledRoot> */}
-        <Box component='section' sx={{
-          background: 'linear-gradient(74deg, #282157, #50449d)',
-          height: { lg: '100%' },
-          overflow: "auto",
-
-        }}>
-          <Grid container spacing={2} sx={{ py: 5, px: 5 }}>
-            <Grid size={{ sm: 4, md: 3, lg: 2 }}>
-              <SideBar setSideBarOpen={setSideBarOpen} siderBarOpen={siderBarOpen} />
-            </Grid>
-            <Grid size={{ sm: siderBarOpen ? 8 : 12, md: 9, lg: 10 }} >
-              <Header setSideBarOpen={setSideBarOpen} siderBarOpen={siderBarOpen} />
-              <Component {...props} />
-            </Grid>
-          </Grid>
+        <Box className='d-flex h-100 w-100' sx={{p:{xs:4,}}}>
+          <SideBar setSideBarOpen={setSideBarOpen} siderBarOpen={siderBarOpen} />
+          <Box className='ms-3 w-100'>
+            <Header setSideBarOpen={setSideBarOpen} siderBarOpen={siderBarOpen} />
+            <Component {...props} />
+          </Box>
         </Box>
-        {/* </StyledRoot> */}
       </React.Fragment>
     )
 

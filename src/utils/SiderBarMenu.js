@@ -1,25 +1,25 @@
 export const sideMenu = [{
   name: 'Dashboard',
   image: 'mage:dashboard-fill',
-  pathname: '/admin/'
+  pathname: '/'
 }, {
   name: 'User List',
   image: 'solar:user-linear',
-  pathname: '/admin/user-list'
+  pathname: '/user-list'
 }, {
   name: 'Words',
   image: 'material-symbols:book-3',
-  pathname: '/admin/'
+  pathname: '/word'
 }, {
   name: 'Rules',
   image: 'tabler:book',
-  pathname: '/admin/'
+  pathname: '/rule'
 }, {
   name: 'Terms & Condition',
   image: 'fluent-mdl2:entitlement-policy',
-  pathname: '/admin/'
+  pathname: '/term-and-condition'
 }, {
   name: 'Privacy Policy',
   image: 'iconoir:privacy-policy',
-  pathname: '/admin/'
+  pathname: '/privacy-policy'
 },]

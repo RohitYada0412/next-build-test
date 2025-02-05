@@ -36,10 +36,10 @@ export const SECONDARY = {
 };
 
 export const PRIMARY = {
-  lighter: "#88CDF7",
-  light: "#C0C0C0",
+  lighter: "#D7F3FD",
+  light: "#B0E4FC",
   main: "#3A94E7",
-  dark: "#1D56A6",
+  dark: "#3A94E7",
   darker: "#0B2A6E",
   contrastText: "#FFFFFF",
 };

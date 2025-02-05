@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/admin',
+  // basePath: '/admin',
   distDir: 'build',
   output: 'export',
   images: {

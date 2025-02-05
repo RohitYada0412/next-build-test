@@ -4,7 +4,7 @@ import { alpha } from "@mui/material/styles";
 
 // SETUP COLORS
 export const GREY = {
-  0: 'rgba(255, 255, 255, 0.14)',
+  0: 'rgb(255, 255, 255)',
   100: "rgba(255, 255, 255, 0.24)",
   200: "#EEEEEE",
   300: "#E6E6E6",
@@ -12,7 +12,7 @@ export const GREY = {
   500: "#D5D5D5",
   600: "#CDCDCD",
   700: "#C4C4C4",
-  800: "#BCBCBC",
+  800: "#fff",
   900: "#B4B4B4",
   1000: "#ABABAB",
   1100: "#A3A3A3",
@@ -25,22 +25,22 @@ export const GREY = {
   1800: "#F3F3F3",
 };
 
-export const PRIMARY = {
-  lighter: "#BEB3ED",
-  light: "#8D80CB",
-  main: "#272052",
-  dark: "#14103B",
-  darker: "#080627",
+export const SECONDARY = {
+  lighter: "#FBFEFF",
+  light: "#FAFDFF",
+  main: "#F7FCFF",
+  dark: "#7C9AB7",
+  darker: "#2F4C7A",
   contrastText: "#2F2F2F",
   hoverBG: "#1D1D1D",
 };
 
-export const SECONDARY = {
-  lighter: "#F4F4F4",
+export const PRIMARY = {
+  lighter: "#88CDF7",
   light: "#C0C0C0",
-  main: "#2F2F2F",
-  dark: "#211719",
-  darker: "#16090D",
+  main: "#3A94E7",
+  dark: "#1D56A6",
+  darker: "#0B2A6E",
   contrastText: "#FFFFFF",
 };
 
@@ -101,7 +101,7 @@ const palette = {
   grey: GREY,
   divider: alpha(GREY[1400], 0.8),
   text: {
-    primary: "rgba(255, 255, 255, 1)",
+    primary: "rgb(15, 15, 15)",
     secondary: "rgba(255, 255, 255, 0.5)",
     dark: "#60737D",
     disabled: "#E0E0E7",
@@ -109,7 +109,7 @@ const palette = {
   },
   background: {
     paper: "rgba(255, 255, 255, 0.14)",
-    default: GREY['0'],
+    default: GREY['100'],
   },
   action: {
     active: GREY['100'],

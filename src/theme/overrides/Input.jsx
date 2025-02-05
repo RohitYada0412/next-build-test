@@ -9,8 +9,7 @@ export default function Input(theme) {
       styleOverrides: {
         root: {
           fontWeight: 500,
-          // backgroundColor: theme.palette.background.default,
-
+          backgroundColor: theme.palette.background.default,
         },
       },
     },
@@ -18,6 +17,7 @@ export default function Input(theme) {
       styleOverrides: {
         root: {
           padding: 1,
+          backgroundColor: "#4D4D4F1A", // Set default input background color
           "&.Mui-disabled": {
             "& svg": { color: theme.palette.text.disabled },
           },
@@ -25,19 +25,10 @@ export default function Input(theme) {
         input: {
           "&::placeholder": {
             opacity: 1,
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: pxToRem(14),
             ...responsiveFontSizes({ sm: 18, md: 18, lg: 18 }),
-            color: theme.palette.text.secondary,
-          },
-        },
-      },
-    },
-    MuiInput: {
-      styleOverrides: {
-        underline: {
-          "&:before": {
-            // borderBottomColor: alpha(theme.palette.grey[500], 0.56),
+            color:'#4D4D4F',
           },
         },
       },
@@ -45,72 +36,47 @@ export default function Input(theme) {
     MuiFilledInput: {
       styleOverrides: {
         root: {
-          backgroundColor: alpha(theme.palette.grey[500], 0.12),
+          backgroundColor: "#4D4D4F", // Set background color for filled inputs
           "&:hover": {
-            "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: "rgba(255, 255, 255, 0.24)", // Hover border color
-            },
-          },
-          "&:hover": {
-            backgroundColor: alpha(theme.palette.grey[500], 0.16),
+            backgroundColor: alpha("#4D4D4F", 0.1),
           },
           "&.Mui-focused": {
-            backgroundColor: theme.palette.action.focus,
+            backgroundColor: alpha("#4D4D4F", 0.9),
           },
           "&.Mui-disabled": {
-            backgroundColor: theme.palette.action.disabledBackground,
-          },
-        },
-        underline: {
-          "&:before": {
-            borderBottomColor: alpha(theme.palette.grey[500], 0.56),
+            backgroundColor: alpha("#4D4D4F", 0.5),
           },
         },
       },
     },
+   
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          borderRadius: 10,
-          backgroundColor: theme.palette.background.default,
-          border: `1px solid ${theme.palette.action.disabledBackground}`, // Always black border
-    
-          // Ensure consistent border color in all states
+          borderRadius: 16,
+          backgroundColor: "#4D4D4F1A",
+          // border: "1px solid #D9D9D9",
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: theme.palette.action.disabledBackground, // Same color for all states
+            borderColor: "#D9D9D9",
           },
           "&:hover .MuiOutlinedInput-notchedOutline": {
-            borderColor: theme.palette.action.disabledBackground, // Prevent hover effect
+            borderColor: "#D9D9D9",
           },
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-            borderColor: theme.palette.action.disabledBackground, // Prevent focus effect
-          },
-          "&.Mui-disabled .MuiOutlinedInput-notchedOutline": {
-            borderColor: theme.palette.action.disabledBackground, // Prevent disabled effect
-          },
-          "&.Mui-error .MuiOutlinedInput-notchedOutline": {
-            borderColor: theme.palette.action.disabledBackground, // Prevent error color
+            borderColor: "#D9D9D9",
           },
         },
-    
-        input: {
-          fontSize: 16,
-          "&.MuiInputBase-inputSizeSmall": {
-            fontSize: 14,
-            "&::placeholder": {
-              fontSize: 14,
-            },
-          },
-          "&::placeholder": {
-            opacity: 1,
-            fontWeight: 300,
-            fontSize: 16,
-            color: theme.palette.text.secondary,
-          },
-        },
+        // input: {
+        //   padding: "10px 15px",
+        //   fontSize: "16px",
+        //   "&::placeholder": {
+        //     color: "#A1A1A1",
+        //   },
+        // },
       },
     },
     
-    
+
+
   };
 }

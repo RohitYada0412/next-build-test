@@ -11,17 +11,18 @@ export default function Button(theme) {
           textWrap: "nowrap",
           letterSpacing: 0.5,
           padding: theme.spacing(1, 2.1),
-          borderRadius: 50,
+          borderRadius: 15,
           transition: ".2s all ease-in-out",
-          backgroundColor:'#FFFFFF',
+          backgroundColor: theme.palette.primary.main,
+          color: '#fff',
           ...(ownerState.variant === "contained" &&
             ownerState.color === "primary" && {
-              "&:hover": {
-                backgroundColor: theme.palette.primary.hoverBG,
-                color: theme.palette.common.white,
-                transition: ".2s all ease-in-out",
-              },
-            }),
+            "&:hover": {
+              backgroundColor: theme.palette.primary.hoverBG,
+              color: theme.palette.common.white,
+              transition: ".2s all ease-in-out",
+            },
+          }),
           ...(ownerState.varianttype === "ghost" && {
             border: "1.2px solid #8A8A8A66",
           }),
@@ -31,10 +32,10 @@ export default function Button(theme) {
           height: 55,
         },
         containedInherit: {
-          color: theme.palette.grey[800],
+          // color: theme.palette.grey[800],
           boxShadow: theme.customShadows.z8,
           "&:hover": {
-            backgroundColor: theme.palette.grey[400],
+            // backgroundColor: theme.palette.grey[400],
           },
         },
         containedPrimary: {
